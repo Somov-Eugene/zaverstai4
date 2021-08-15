@@ -1,0 +1,61 @@
+// font-family: 'Montserrat', sans-serif;
+@font-face {
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-display: swap;
+
+  src: local("Montserrat Regular"),
+    local("Montserrat-Regular"),
+    url("../fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-display: swap;
+
+  src: local("Montserrat Medium"),
+    local("Montserrat-Medium"),
+    url("../fonts/montserrat-medium-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-medium-webfont.woff") format("woff");
+}
+
+// font-family: 'Playfair Display', serif;
+@font-face {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-display: swap;
+
+  src: local("PlayfairDisplay Regular"),
+    local("PlayfairDisplay-Regular"),
+    url("../fonts/playfairdisplay-regular-webfont.woff2") format("woff2"),
+    url("../fonts/playfairdisplay-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-display: swap;
+
+  src: local("PlayfairDisplay Italic"),
+    local("PlayfairDisplay-Italic"),
+    url("../fonts/playfairdisplay-italic-webfont.woff2") format("woff2"),
+    url("../fonts/playfairdisplay-italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-display: swap;
+
+  src: local("PlayfairDisplay Bold"),
+    local("PlayfairDisplay-Bold"),
+    url("../fonts/playfairdisplay-bold-webfont.woff2") format("woff2"),
+    url("../fonts/playfairdisplay-bold-webfont.woff") format("woff");
+}

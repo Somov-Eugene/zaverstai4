@@ -1,0 +1,14 @@
+@mixin font($fw: 400, $fst: "normal", $fsz: 16px, $lh: 19.5px) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: $fw;
+  font-style: $fst;
+  font-size: $fsz;
+  line-height: $lh;
+}
+
+@mixin list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}

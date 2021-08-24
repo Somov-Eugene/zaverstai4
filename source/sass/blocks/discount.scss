@@ -1,0 +1,48 @@
+.discount {
+  margin-top: 80px;
+  background-color: $main;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    width: 610px;
+
+    padding-top: 40px;
+    padding-left: 102px;
+    padding-right: 20px;
+    padding-bottom: 52px;
+    color: $white;
+
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-family: "Playfair Display", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 59px;
+      letter-spacing: 0.02em;
+    }
+
+    & p {
+      margin-top: 0;
+      margin-bottom: 12px;
+      @include font(24px, 29px);
+    }
+  }
+
+  &__image {
+    width: 590px;
+    color: $white;
+
+    & img {
+      display: block;
+      width: 590px;
+      height: 391px;
+    }
+  }
+}

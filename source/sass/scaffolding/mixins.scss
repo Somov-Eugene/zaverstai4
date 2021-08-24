@@ -1,4 +1,4 @@
-@mixin font($fw: 400, $fst: "normal", $fsz: 16px, $lh: 19.5px) {
+@mixin font($fsz: 16px, $lh: 20px, $fw: 400, $fst: "normal") {
   font-family: "Montserrat", sans-serif;
   font-weight: $fw;
   font-style: $fst;

@@ -1,0 +1,58 @@
+.nav {
+  display: block;
+  position: relative;
+  padding: 22px 0;
+
+  &__logo {
+    position: absolute;
+    top: 14px;
+    left: 550px;
+    width: 100px;
+    height: 33px;
+  }
+
+  &__menu {
+    @include list;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:nth-child(1) {
+      padding-right: 102px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 102px;
+    }
+
+    &:nth-child(3) {
+      padding-right: 224px;
+    }
+
+    &:nth-child(4) {
+      padding-right: 90px;
+    }
+
+    &:nth-child(5) {
+      padding-right: 90px;
+    }
+  }
+
+  &__link {
+    outline: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: $main;
+    }
+
+    &:active {
+      color: darken($main, 30%);
+    }
+  }
+}

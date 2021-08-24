@@ -1,0 +1,85 @@
+.catalog {
+  margin-top: 56px;
+
+  &__list {
+    @include list();
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__link {
+    img {
+      display: block;
+      width: 387px;
+      height: 442px;
+      border-radius: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      &>.catalog__description {
+        background-color: rgba($main, 0.75);
+      }
+    }
+
+    &:focus {
+      outline-color: $main;
+      outline-width: 2px;
+      outline-offset: 5px;
+    }
+
+    &:active {
+      &>.catalog__description {
+        background-color: rgba($main, 0.85);
+      }
+    }
+  }
+
+  &__description {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 387px;
+
+    padding-top: 183px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 175px;
+
+    text-align: center;
+    color: $white;
+    background-color: rgba($main, 0.6);
+    border-radius: 10px;
+
+    &--1 {
+      left: 0;
+    }
+
+    &--2 {
+      left: 407px;
+    }
+
+    &--3 {
+      left: 814px;
+    }
+
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-family: "Playfair Display", serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 48px;
+      letter-spacing: 0.02em;
+    }
+
+    & p {
+      margin-top: 0;
+      margin-bottom: 8px;
+      @include font();
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.btn {
+  display: inline-block;
+  font: inherit;
+  color: $white;
+  background-color: $button_bg;
+  border-radius: 40px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: darken($button_bg, 10%);
+  }
+
+  &:active {
+    background-color: darken($button_bg, 15%);
+  }
+
+  &__catalog {
+    margin-top: 40px;
+    padding: 30px 70px;
+  }
+
+  &__order {
+    margin-top: 40px;
+    padding: 30px 106px;
+  }
+}

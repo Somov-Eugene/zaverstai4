@@ -1,0 +1,60 @@
+.footer {
+  color: $white;
+  background-color: $main;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  &__logo {
+    width: 100px;
+    height: 33px;
+  }
+
+  &__navmenu {
+    @include list();
+    display: flex;
+    justify-content: space-between;
+    width: 795px;
+  }
+
+  &__navlink {
+    outline: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__social {
+    @include list();
+    display: flex;
+    justify-content: space-between;
+    width: 97px;
+
+    &__item a {
+      &:focus {
+        outline-color: $white;
+        outline-width: 2px;
+        outline-offset: 5px;
+      }
+    }
+
+    &__icon {
+      fill: $white;
+
+      &:hover {
+        fill: darken($white, 15%);
+      }
+
+      &:active {
+        fill: darken($white, 30%);
+      }
+    }
+  }
+}

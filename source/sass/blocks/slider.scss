@@ -1,0 +1,35 @@
+.slider {
+  &__item {
+    display: block;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    width: 122px;
+    margin: 0 auto;
+  }
+
+  &__button {
+    display: block;
+    position: relative;
+    padding: 24px 0;
+    font-size: 0;
+    width: 51px;
+    height: 16px;
+    border: none;
+    background-image: url(../../img/arrow.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    cursor: pointer;
+
+    outline-color: $main;
+    outline-width: 2px;
+    outline-offset: 5px;
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+  }
+}

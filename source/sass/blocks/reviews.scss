@@ -1,0 +1,38 @@
+.reviews {
+  margin-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 64px;
+  border: 1px solid $main;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @include list();
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 44px;
+  }
+
+  &__item {
+    width: 300px;
+    text-align: center;
+
+    & blockquote {
+      display: block;
+      margin: 0;
+    }
+
+    & cite {
+      display: block;
+      margin-top: 16px;
+      @include font(16px, 20px, 500);
+      font-style: normal;
+    }
+
+  }
+
+
+}

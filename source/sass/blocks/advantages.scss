@@ -2,7 +2,7 @@
   margin-top: 48px;
 
   &__list {
-    @include list;
+    @include list();
 
     display: flex;
     justify-content: space-between;

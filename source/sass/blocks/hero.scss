@@ -1,23 +1,16 @@
 .hero {
-  margin-top: 82px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   min-height: 462px;
 
   &__text {
-    display: block;
     width: 384px;
 
     & h1 {
       margin-top: 0;
       margin-bottom: 24px;
-
-      font-family: "Playfair Display", serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 44px;
-      line-height: 59px;
-      color: $main;
+      @include font_caption(44px, 59px, 400, 0);
 
       & span {
         font-style: italic;
@@ -32,22 +25,29 @@
   }
 
   &__bouquet {
+    flex-shrink: 0;
     max-width: 387px;
 
+    & img {
+      display: block;
+      border-radius: 10px;
+    }
+
     &--1 {
-      width: 386px;
-      height: 404px;
       align-self: flex-end;
       filter: drop-shadow(0px 4px 4px rgba($black, 0.25)) drop-shadow(0px 4px 4px rgba($black, 0.25));
+
+      & img {
+        width: 386px;
+        height: 404px;
+      }
     }
 
     &--2 {
-      width: 387px;
-      height: 420px;
-    }
-
-    &__img {
-      border-radius: 10px;
+      & img {
+        width: 387px;
+        height: 420px;
+      }
     }
   }
 }

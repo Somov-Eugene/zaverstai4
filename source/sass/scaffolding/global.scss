@@ -9,9 +9,10 @@ html {
 }
 
 body {
-  @include font;
   color: $main;
   background-color: $white;
+
+  @include font();
 }
 
 img {
@@ -55,14 +56,7 @@ a {
 .caption {
   margin-top: 0;
   margin-bottom: 36px;
-
-  font-family: "Playfair Display", serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-  letter-spacing: 0.02em;
-
-  color: $main;
   text-align: center;
+
+  @include font_caption();
 }

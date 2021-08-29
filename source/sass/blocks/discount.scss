@@ -20,12 +20,7 @@
     & h3 {
       margin-top: 0;
       margin-bottom: 24px;
-      font-family: "Playfair Display", serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 44px;
-      line-height: 59px;
-      letter-spacing: 0.02em;
+      @include font_caption(44px, 59px, 400);
     }
 
     & p {
@@ -36,6 +31,7 @@
   }
 
   &__image {
+    flex-shrink: 0;
     width: 590px;
     color: $white;
 

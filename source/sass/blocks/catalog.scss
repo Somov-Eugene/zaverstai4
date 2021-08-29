@@ -2,11 +2,19 @@
   margin-top: 56px;
 
   &__list {
+    position: relative;
     @include list();
 
     display: flex;
     justify-content: space-between;
-    position: relative;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
   }
 
   &__link {
@@ -68,12 +76,7 @@
     & h3 {
       margin-top: 0;
       margin-bottom: 8px;
-      font-family: "Playfair Display", serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 36px;
-      line-height: 48px;
-      letter-spacing: 0.02em;
+      @include font_caption();
     }
 
     & p {

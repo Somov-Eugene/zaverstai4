@@ -1,9 +1,18 @@
-@mixin font($fsz: 16px, $lh: 20px, $fw: 400, $fst: "normal") {
-  font-family: "Montserrat", sans-serif;
+@mixin font($fsz: 16px, $lh: 20px, $fw: 400) {
+  font-family: "Montserrat", "Arial", "Helvetica", "Tahoma", sans-serif;
+  font-style: normal;
   font-weight: $fw;
-  font-style: $fst;
   font-size: $fsz;
   line-height: $lh;
+}
+
+@mixin font_caption($fsz: 36px, $lh: 48px, $fw: 700, $lsp: 0.02em) {
+  font-family: "Playfair Display", "Times New Roman", "Georgia", serif;
+  font-style: normal;
+  font-weight: $fw;
+  font-size: $fsz;
+  line-height: $lh;
+  letter-spacing: $lsp;
 }
 
 @mixin list {

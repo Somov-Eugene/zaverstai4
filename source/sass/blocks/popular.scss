@@ -1,0 +1,82 @@
+.popular {
+  margin-bottom: 69px;
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 36px;
+    text-align: center;
+    @include font_caption();
+  }
+
+  &__slider-list {
+    @include list();
+    display: flex;
+  }
+
+  &__slider-nav {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+
+  &__slider-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &.previous {
+      margin-right: 20px;
+    }
+  }
+
+  &__slide {
+    display: none;
+    align-items: flex-start;
+
+    &:nth-child(1) {
+      display: flex;
+    }
+
+    &-block {
+      margin-right: 20px;
+      padding-top: 26px;
+      max-width: 387px;
+    }
+
+    &-heading {
+      margin-top: 0;
+      margin-bottom: 20px;
+      @include font(24px, 29px, 500);
+    }
+
+    &-text {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    &-size {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    &-price {
+      margin-top: 0;
+      margin-bottom: 64px;
+      @include font(24px, 29px, 500);
+    }
+
+    &-button {
+      padding: 30px 107px;
+    }
+  }
+}

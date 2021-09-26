@@ -1,35 +1,30 @@
 .social {
   &__list {
     @include list();
-    margin-bottom: 20px;
-
     display: flex;
-    justify-content: space-between;
-    max-width: 97px;
   }
 
   &__item {
-    width: 20px;
-    height: 20px;
-    text-align: center;
+    margin-right: 20px;
 
-    & a:focus {
-      outline-color: $main;
-      outline-width: 2px;
-      outline-offset: 5px;
-    }
-  }
-
-  &__icon {
-    fill: $button_bg;
-
-    &:hover,
-    &:focus {
-      fill: darken($button_bg, 10%);
+    &:last-child {
+      margin-right: 0;
     }
 
-    &:active {
-      fill: darken($button_bg, 15%);
+    a {
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        outline-color: $main;
+        outline-width: 2px;
+        outline-offset: 5px;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
     }
   }
 }

@@ -1,64 +1,30 @@
 .advantages {
-  margin-top: 48px;
+  margin-bottom: 80px;
 
   &__list {
     @include list();
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
   }
 
   &__item {
-    max-width: 285px;
-    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      height: 52px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  &__image {
+    margin-right: 20px;
+  }
 
-    &--1 {
-      margin-left: 102px;
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 8px;
+    @include font(16px, 20px, 500);
+  }
 
-      &::before {
-        left: -102px;
-        width: 82px;
-        background-image: url("../../img/advantage-1.svg");
-      }
-    }
-
-    &--2 {
-      margin-left: 72px;
-
-      &::before {
-        left: -72px;
-        width: 52px;
-        background-image: url("../../img/advantage-2.svg");
-      }
-    }
-
-    &--3 {
-      margin-left: 79px;
-
-      &::before {
-        left: -79px;
-        width: 59px;
-        background-image: url("../../img/advantage-3.svg");
-      }
-    }
-
-    & p {
-      margin-top: 0;
-      margin-bottom: 9px;
-      @include font();
-    }
-
-    & p strong {
-      @include font(16px, 19.5px, 500);
-    }
+  &__text {
+    margin: 0;
   }
 }

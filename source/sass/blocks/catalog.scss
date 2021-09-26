@@ -1,35 +1,43 @@
 .catalog {
-  margin-top: 56px;
+  margin-bottom: 80px;
 
   &__list {
-    position: relative;
     @include list();
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 442px;
+    column-gap: 20px;
   }
 
   &__item {
-    flex-shrink: 0;
-  }
+    position: relative;
 
-  &__item:not(:last-child) {
-    margin-right: 20px;
+    & > picture img {
+      position: absolute;
+      border-radius: 10px;
+      object-fit: cover;
+      z-index: -1;
+    }
   }
 
   &__link {
-    img {
-      display: block;
-      width: 387px;
-      height: 442px;
-      border-radius: 10px;
-    }
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba($main, 0.6);
 
     &:hover,
     &:focus {
-      &>.catalog__description {
-        background-color: rgba($main, 0.75);
-      }
+      opacity: 1;
+      background-color: rgba($main, 0.75);
     }
 
     &:focus {
@@ -39,50 +47,20 @@
     }
 
     &:active {
-      &>.catalog__description {
-        background-color: rgba($main, 0.85);
-      }
+      opacity: 1;
+      background-color: rgba($main, 1);
     }
   }
 
-  &__description {
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 387px;
-
-    padding-top: 183px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 175px;
-
-    text-align: center;
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 8px;
     color: $white;
-    background-color: rgba($main, 0.6);
-    border-radius: 10px;
+    @include font_caption();
+  }
 
-    &--1 {
-      left: 0;
-    }
-
-    &--2 {
-      left: 407px;
-    }
-
-    &--3 {
-      left: 814px;
-    }
-
-    & h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      @include font_caption();
-    }
-
-    & p {
-      margin-top: 0;
-      margin-bottom: 8px;
-      @include font();
-    }
+  &__text {
+    margin: 0;
+    color: $white;
   }
 }

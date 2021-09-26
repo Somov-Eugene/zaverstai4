@@ -1,18 +1,12 @@
 html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 body {
   color: $main;
   background-color: $white;
-
   @include font();
+  min-width: 1220px;
 }
 
 img {
@@ -28,35 +22,24 @@ a {
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
+  padding: 0;
   width: 1px;
   height: 1px;
-  margin: -1px;
   border: 0;
-  padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
-.container {
-  max-width: 1240px;
-  padding: 0 20px;
+.content-container {
   margin: 0 auto;
+  padding: 0 10px;
+  width: 1200px;
 }
 
-.container--small {
-  max-width: 834px;
-}
-
-.container--big {
-  max-width: 1480px;
-}
-
-.caption {
-  margin-top: 0;
-  margin-bottom: 36px;
-  text-align: center;
-
-  @include font_caption();
+.content-container-small {
+  margin: 0 auto;
+  width: 794px;
 }

@@ -25,6 +25,13 @@
     background-color: transparent;
     border: none;
     appearance: none;
+    cursor: pointer;
+
+    &:focus {
+      outline-color: $main;
+      outline-width: 2px;
+      outline-offset: 5px;
+    }
 
     &:hover {
       opacity: 0.8;

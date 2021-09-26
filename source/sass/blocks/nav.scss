@@ -1,46 +1,22 @@
 .nav {
   display: block;
-  position: relative;
-  padding: 22px 0;
 
-  &__logo {
-    position: absolute;
-    top: 14px;
-    left: 550px;
-    width: 100px;
-    height: 33px;
-  }
-
-  &__menu {
+  &__list {
     @include list();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  &__item {
-    display: inline-block;
-
-    &:nth-child(1) {
-      padding-right: 102px;
-    }
-
-    &:nth-child(2) {
-      padding-right: 102px;
-    }
-
-    &:nth-child(3) {
-      padding-right: 224px;
-    }
-
-    &:nth-child(4) {
-      padding-right: 90px;
-    }
-
-    &:nth-child(5) {
-      padding-right: 90px;
-    }
+  &__item:nth-child(6n + 3) {
+    margin-right: 97px;
   }
 
   &__link {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
 
     &:hover,
     &:focus {

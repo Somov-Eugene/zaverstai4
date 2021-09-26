@@ -1,34 +1,36 @@
 .reviews {
-  margin-top: 80px;
-  padding-top: 40px;
-  padding-bottom: 64px;
-  border: 1px solid $main;
+  margin-bottom: 80px;
 
-  &__title {
+  & .content-container {
+    box-sizing: border-box;
+    padding: 40px 44px 64px;
+    border: 1px solid $main;
+  }
+
+  &__heading {
+    margin-top: 0;
     margin-bottom: 40px;
+    text-align: center;
+    @include font_caption();
   }
 
   &__list {
     @include list();
 
-    display: flex;
-    justify-content: space-between;
-    padding: 0 44px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 106px;
   }
 
   &__item {
-    flex-shrink: 0;
-    width: 300px;
     text-align: center;
 
     & blockquote {
-      display: block;
       margin: 0;
+      margin-bottom: 16px;
     }
 
     & cite {
-      display: block;
-      margin-top: 16px;
       @include font(16px, 20px, 500);
       font-style: normal;
     }

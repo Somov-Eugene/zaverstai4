@@ -1,44 +1,35 @@
 .discount {
-  margin-top: 80px;
-  background-color: $main;
+  margin-bottom: 80px;
 
-  &__wrapper {
+  &__block {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: $main;
+
+    &-text {
+      padding: 40px 22px 64px 102px;
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: $white;
+    @include font_caption(44px, 59px, 400);
   }
 
   &__text {
-    width: 610px;
-
-    padding-top: 40px;
-    padding-left: 102px;
-    padding-right: 20px;
-    padding-bottom: 52px;
+    margin: 0;
+    max-width: 387px;
     color: $white;
-
-    & h3 {
-      margin-top: 0;
-      margin-bottom: 24px;
-      @include font_caption(44px, 59px, 400);
-    }
-
-    & p {
-      margin-top: 0;
-      margin-bottom: 12px;
-      @include font(24px, 29px);
-    }
+    @include font(24px, 29px);
   }
 
   &__image {
-    flex-shrink: 0;
-    width: 590px;
     color: $white;
+    min-width: 590px;
 
     & img {
       display: block;
-      width: 590px;
-      height: 391px;
     }
   }
 }

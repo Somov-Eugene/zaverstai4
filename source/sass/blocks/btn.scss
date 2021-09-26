@@ -1,10 +1,17 @@
-.btn {
+.button {
   display: inline-block;
+  vertical-align: middle;
+  padding: 30px 70px;
   font: inherit;
   color: $white;
   background-color: $button_bg;
+  appearance: none;
+  border: none;
   border-radius: 40px;
-  outline: none;
+
+  &:focus {
+    outline: none;
+  }
 
   &:hover,
   &:focus {
@@ -13,17 +20,5 @@
 
   &:active {
     background-color: darken($button_bg, 15%);
-  }
-
-  &__catalog {
-    margin-top: 40px;
-    margin-right: 20px;
-    padding: 30px 70px;
-  }
-
-  &__order {
-    margin-top: 40px;
-    margin-right: 20px;
-    padding: 30px 106px;
   }
 }

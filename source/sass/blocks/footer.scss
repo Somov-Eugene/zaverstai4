@@ -1,62 +1,70 @@
 .footer {
+  padding: 21px 0 38px;
   color: $white;
   background-color: $main;
 
-  &__wrapper {
+  & .content-container {
     display: flex;
-    justify-content: space-between;
+  }
+
+  & .logo {
+    position: static;
+    margin-right: 103px;
+    transform: none;
+
+    & img {
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: flex;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 40px;
-  }
 
-  &__logo {
-    width: 100px;
-    height: 33px;
-  }
+    &-list {
+      @include list();
 
-  &__navmenu {
-    @include list();
-
-    display: flex;
-    justify-content: space-between;
-    width: 795px;
-  }
-
-  &__navlink {
-    outline: none;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 19px;
     }
-  }
 
-  &__social {
-    @include list();
+    &-item {
+      margin-right: 68px;
+    }
 
-    display: flex;
-    justify-content: space-between;
-    width: 97px;
+    &-link {
+      color: $white;
 
-    &__item a {
       &:focus {
-        outline-color: $white;
-        outline-width: 2px;
-        outline-offset: 5px;
+        outline: none;
       }
-    }
 
-    &__icon {
-      fill: $white;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
 
-      &:hover {
-        fill: darken($white, 15%);
+      &:visited {
+        color: $white;
       }
 
       &:active {
-        fill: darken($white, 30%);
+        color: darken($white, 30%);
       }
+    }
+  }
+
+  & .social__list {
+    margin-left: auto;
+    align-items: center;
+  }
+
+  & .social__item {
+    margin-right: 17px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
